@@ -77,4 +77,16 @@ void QueueLL::display()
     
 }
 
+void QueueLL::clear() 
+{
+   QueueNode*nodePtr=nullptr;
+   QueueNode*nextPtr=nullptr;
+   nodePtr=top;
+    while (nodePtr!=nullptr) 
+    {
+        nextPtr=nodePtr->next;
+        delete nodePtr;
+        nodePtr = nextPtr;
+    }
+}
 
